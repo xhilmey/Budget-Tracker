@@ -25,7 +25,7 @@ def load_budgetdata(filepath):
     try:
         with open(filepath, 'r') as file:
             data = json.load(file)
-            return data["initialbudget"], data["expenses"]
+            return data["initial_budget"], data["expenses"]
     except (FileNotFoundError, json.JSONDecodeError):
         return 0, [] 
     
